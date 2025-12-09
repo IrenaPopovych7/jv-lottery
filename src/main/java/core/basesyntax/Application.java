@@ -1,15 +1,14 @@
 package core.basesyntax;
 
 public class Application {
+    private static final int BALLS_AMOUNT = 3;
+
     public static void main(String[] args) {
         Lottery lottery = new Lottery();
 
-        Ball ballOne = lottery.getRandomBall();
-        Ball ballTwo = lottery.getRandomBall();
-        Ball ballThree = lottery.getRandomBall();
-
-        System.out.println(ballOne);
-        System.out.println(ballTwo);
-        System.out.println(ballThree);
+        for (int i = 0; i < BALLS_AMOUNT; i++) {
+            Ball ballOne = lottery.getRandomBall();
+            System.out.println(ballOne);
+        }
     }
 }
